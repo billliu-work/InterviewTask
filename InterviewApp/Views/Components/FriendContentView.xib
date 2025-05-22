@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23727"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendContentView" customModule="InterviewApp" customModuleProvider="target">
+            <connections>
+                <outlet property="chatView" destination="bVz-E0-Omp" id="Mbo-I4-wyW"/>
+                <outlet property="emptyView" destination="rGG-Pl-O08" id="pDA-Vf-0lG"/>
+                <outlet property="friendList" destination="5xP-Jm-DNw" id="Wis-ax-qwa"/>
+                <outlet property="searchBar" destination="zWq-M6-OZB" id="Wqt-lA-NVk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-Pl-O08" userLabel="EmptyView" customClass="EmptyFriendsView" customModule="InterviewApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVz-E0-Omp" userLabel="ChatView" customClass="ChatView" customModule="InterviewApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWq-M6-OZB" userLabel="SearchBar" customClass="FriendsSearchBarView" customModule="InterviewApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="Zhx-zD-ILW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xP-Jm-DNw" userLabel="FriendList" customClass="FriendListView" customModule="InterviewApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="62" width="375" height="389"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rGG-Pl-O08" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0fT-q4-izi"/>
+                <constraint firstItem="5xP-Jm-DNw" firstAttribute="top" secondItem="zWq-M6-OZB" secondAttribute="bottom" id="1sJ-ko-tbC"/>
+                <constraint firstAttribute="trailing" secondItem="rGG-Pl-O08" secondAttribute="trailing" id="5Nq-TB-5T7"/>
+                <constraint firstAttribute="bottom" secondItem="bVz-E0-Omp" secondAttribute="bottom" id="5P8-ed-gyd"/>
+                <constraint firstItem="bVz-E0-Omp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NLT-ta-jjV"/>
+                <constraint firstItem="rGG-Pl-O08" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="O1P-eu-bVJ"/>
+                <constraint firstAttribute="bottom" secondItem="5xP-Jm-DNw" secondAttribute="bottom" id="QrV-Xa-svJ"/>
+                <constraint firstAttribute="trailing" secondItem="bVz-E0-Omp" secondAttribute="trailing" id="RFv-NV-8TA"/>
+                <constraint firstAttribute="bottom" secondItem="rGG-Pl-O08" secondAttribute="bottom" id="VmI-x9-KX4"/>
+                <constraint firstItem="zWq-M6-OZB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a6x-Te-Y56"/>
+                <constraint firstItem="zWq-M6-OZB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mvj-tZ-bVb"/>
+                <constraint firstAttribute="trailing" secondItem="zWq-M6-OZB" secondAttribute="trailing" id="ncP-W0-YC3"/>
+                <constraint firstItem="5xP-Jm-DNw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pBZ-5N-9T2"/>
+                <constraint firstItem="bVz-E0-Omp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="v0P-1i-CgN"/>
+                <constraint firstAttribute="trailing" secondItem="5xP-Jm-DNw" secondAttribute="trailing" id="zcP-0l-gpT"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="123" y="10"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
