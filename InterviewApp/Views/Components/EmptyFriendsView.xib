@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyFriendsView" customModule="InterviewApp" customModuleProvider="target">
+            <connections>
+                <outlet property="addFriendButton" destination="Ymx-JX-Z1Q" id="LNk-1T-UGs"/>
+                <outlet property="footerLabel" destination="Rdt-kC-D0M" id="OEd-uf-91l"/>
+                <outlet property="illustrationView" destination="GGP-AT-svm" id="gZK-JJ-b9w"/>
+                <outlet property="subtitleLabel" destination="dHZ-MT-W3O" id="Tdb-E6-m71"/>
+                <outlet property="titleLabel" destination="IvU-B2-63P" id="0ob-TL-Y95"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="451"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFriendsEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="GGP-AT-svm" userLabel="IllustrationView">
+                    <rect key="frame" x="74" y="30" width="245" height="172"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="172" id="Dgd-Bc-R6P"/>
+                        <constraint firstAttribute="width" constant="245" id="Ee8-Dz-DD5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="就從加好友開始吧 : )" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvU-B2-63P" userLabel="TitleLabel">
+                    <rect key="frame" x="30" y="242.99999999999997" width="333" height="29.666666666666657"/>
+                    <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="21"/>
+                    <color key="textColor" name="colorLightGray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHZ-MT-W3O" userLabel="SubtitleLabel">
+                    <rect key="frame" x="30" y="286.66666666666669" width="333" height="39.333333333333314"/>
+                    <string key="text">與好友們一起用 KOKO 聊起來!
+還能互相收付款、發紅包喔 : )</string>
+                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
+                    <color key="textColor" name="colorLightGray2"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymx-JX-Z1Q" userLabel="AddFriendButton" customClass="GradientButton" customModule="InterviewApp" customModuleProvider="target">
+                    <rect key="frame" x="100.66666666666669" y="351" width="192" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="192" id="Mod-en-c43"/>
+                        <constraint firstAttribute="height" constant="40" id="gkJ-hn-VVS"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="加好友">
+                        <fontDescription key="titleFontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" name="colorAppleGreen40"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" name="colorFrogGreen"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" name="colorGreenB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="trailingIcon" value="icAddFriendWhite"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onAddFriendClicked:" destination="-1" eventType="touchUpInside" id="Ey1-ku-XS4"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幫助好友更快找到你?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdt-kC-D0M" userLabel="FooterLabel">
+                    <rect key="frame" x="30" y="428" width="333" height="18.333333333333314"/>
+                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="13"/>
+                    <color key="textColor" name="colorLightGray2"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="IvU-B2-63P" secondAttribute="trailing" constant="30" id="7Hq-NY-piP"/>
+                <constraint firstItem="dHZ-MT-W3O" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Djs-PR-2dW"/>
+                <constraint firstItem="IvU-B2-63P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Dua-Cz-OGY"/>
+                <constraint firstItem="GGP-AT-svm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="Gw9-h7-YQg"/>
+                <constraint firstItem="Rdt-kC-D0M" firstAttribute="top" secondItem="Ymx-JX-Z1Q" secondAttribute="bottom" constant="37" id="IiS-oT-tn2"/>
+                <constraint firstItem="Ymx-JX-Z1Q" firstAttribute="top" secondItem="dHZ-MT-W3O" secondAttribute="bottom" constant="25" id="Knv-Fh-gng"/>
+                <constraint firstAttribute="trailing" secondItem="dHZ-MT-W3O" secondAttribute="trailing" constant="30" id="RsZ-zr-Isa"/>
+                <constraint firstItem="IvU-B2-63P" firstAttribute="top" secondItem="GGP-AT-svm" secondAttribute="bottom" constant="41" id="VRP-lT-LvY"/>
+                <constraint firstAttribute="trailing" secondItem="Rdt-kC-D0M" secondAttribute="trailing" constant="30" id="WCw-c6-pnC"/>
+                <constraint firstItem="GGP-AT-svm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Y6l-tI-yvY"/>
+                <constraint firstItem="Rdt-kC-D0M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="dzJ-tS-asH"/>
+                <constraint firstItem="dHZ-MT-W3O" firstAttribute="top" secondItem="IvU-B2-63P" secondAttribute="bottom" constant="14" id="j7J-G0-Wnu"/>
+                <constraint firstItem="Ymx-JX-Z1Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l0l-jK-QpG"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="10"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icAddFriendWhite" width="24" height="24"/>
+        <image name="imgFriendsEmpty" width="245" height="172"/>
+        <namedColor name="colorAppleGreen40">
+            <color red="0.47450980392156861" green="0.7686274509803922" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorFrogGreen">
+            <color red="0.33725490196078434" green="0.70196078431372544" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorGreenB">
+            <color red="0.65098039215686276" green="0.80000000000000004" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorLightGray">
+            <color red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorLightGray2">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

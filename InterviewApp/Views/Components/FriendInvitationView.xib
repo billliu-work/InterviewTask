@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendInvitationView">
+            <connections>
+                <outlet property="acceptButton" destination="Ob3-Kv-aqw" id="Abm-x9-w67"/>
+                <outlet property="backgroundView" destination="uAV-A7-fCi" id="bbM-Z0-HOr"/>
+                <outlet property="declineButton" destination="MkP-8V-6OI" id="QRM-3U-D4g"/>
+                <outlet property="nameLabel" destination="RmL-Qp-2KR" id="fPS-J0-s0F"/>
+                <outlet property="portraitView" destination="FyW-gx-y7K" id="bxb-JI-E03"/>
+                <outlet property="subtitleLabel" destination="xKv-67-jNy" id="4A8-dR-gt5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAV-A7-fCi" userLabel="BackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="315" height="70"/>
+                    <color key="backgroundColor" name="colorWhiteThree"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFriendsList" translatesAutoresizingMaskIntoConstraints="NO" id="FyW-gx-y7K" userLabel="PortraitView">
+                    <rect key="frame" x="15" y="15" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Nxk-nb-zXq"/>
+                        <constraint firstAttribute="height" constant="40" id="uHw-Zx-j9X"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0gQ-71-Loe">
+                    <rect key="frame" x="81" y="13.666666666666664" width="134" height="43"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Name)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-Qp-2KR" userLabel="NameLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="134" height="22.666666666666668"/>
+                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                            <color key="textColor" name="colorLightGray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀請你成為好友：）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKv-67-jNy" userLabel="SubtitleLabel">
+                            <rect key="frame" x="0.0" y="24.666666666666671" width="134" height="18.333333333333329"/>
+                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="13"/>
+                            <color key="textColor" name="colorLightGray2"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob3-Kv-aqw" userLabel="AcceptButton">
+                    <rect key="frame" x="225" y="20" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="cDW-Zw-RpR"/>
+                        <constraint firstAttribute="width" constant="30" id="fzY-al-bWK"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="btnFriendsAgree"/>
+                    <connections>
+                        <action selector="onAcceptClicked:" destination="-1" eventType="touchUpInside" id="eaP-69-98g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkP-8V-6OI" userLabel="DeclineButton">
+                    <rect key="frame" x="270" y="20" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="GbI-DK-c0f"/>
+                        <constraint firstAttribute="height" constant="30" id="RjZ-EI-U2i"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="btnFriendsDelete"/>
+                    <connections>
+                        <action selector="onDeclineClicked:" destination="-1" eventType="touchUpInside" id="HFC-ts-FPy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ob3-Kv-aqw" firstAttribute="leading" secondItem="0gQ-71-Loe" secondAttribute="trailing" constant="10" id="1uH-of-VUS"/>
+                <constraint firstItem="MkP-8V-6OI" firstAttribute="centerY" secondItem="Ob3-Kv-aqw" secondAttribute="centerY" id="7gk-el-q5Q"/>
+                <constraint firstAttribute="trailing" secondItem="MkP-8V-6OI" secondAttribute="trailing" constant="15" id="DH8-Xb-LEZ"/>
+                <constraint firstItem="0gQ-71-Loe" firstAttribute="leading" secondItem="FyW-gx-y7K" secondAttribute="trailing" constant="26" id="HTk-g2-Qi2"/>
+                <constraint firstItem="Ob3-Kv-aqw" firstAttribute="centerY" secondItem="0gQ-71-Loe" secondAttribute="centerY" id="Ol4-qc-Zdf"/>
+                <constraint firstItem="0gQ-71-Loe" firstAttribute="centerY" secondItem="FyW-gx-y7K" secondAttribute="centerY" id="PFD-Oh-Ghh"/>
+                <constraint firstItem="uAV-A7-fCi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SMD-Dm-cYq"/>
+                <constraint firstItem="FyW-gx-y7K" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Shu-RE-BaH"/>
+                <constraint firstAttribute="trailing" secondItem="uAV-A7-fCi" secondAttribute="trailing" id="ZdC-ZP-7mf"/>
+                <constraint firstItem="uAV-A7-fCi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iGZ-Eg-Brk"/>
+                <constraint firstItem="FyW-gx-y7K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="rrI-Xy-jjj"/>
+                <constraint firstItem="MkP-8V-6OI" firstAttribute="leading" secondItem="Ob3-Kv-aqw" secondAttribute="trailing" constant="15" id="xri-dc-aX0"/>
+                <constraint firstAttribute="bottom" secondItem="uAV-A7-fCi" secondAttribute="bottom" id="z9b-W4-X5G"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="0.76335877862595414" y="8.4507042253521139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnFriendsAgree" width="30" height="30"/>
+        <image name="btnFriendsDelete" width="30" height="30"/>
+        <image name="imgFriendsList" width="40" height="40"/>
+        <namedColor name="colorLightGray">
+            <color red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorLightGray2">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorWhiteThree">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
